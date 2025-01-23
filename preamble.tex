@@ -1,0 +1,129 @@
+\usepackage{graphicx} % Required for inserting images
+\usepackage{appendix}
+\usepackage{subfiles}
+\usepackage{amsmath,amsthm,amssymb,latexsym} 
+% For including math equations, theorems, symbols, etc
+\usepackage{todonotes,comment,xr,hyperref,xcolor}
+
+
+%%%%%%%%%%%%%%%%%%%%%%% NATURAL NUMBERS, INTEGERS, ETC. %%%%%%%%%%%%%%%%
+\providecommand{\R}{}
+\providecommand{\Z}{}
+\providecommand{\N}{}
+\providecommand{\C}{}
+\providecommand{\Q}{}
+\providecommand{\G}{}
+\providecommand{\Lt}{}
+\renewcommand{\R}{\mathbb{R}}
+\renewcommand{\Z}{\mathbb{Z}}
+\renewcommand{\N}{{\mathbb N}}
+\renewcommand{\C}{\mathbb{C}}
+\renewcommand{\Q}{\mathbb{Q}}
+\renewcommand{\G}{\mathbb{G}}
+\renewcommand{\Lt}{\mathbb{L}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%% BASIC PROBABILITY %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\E}[1]{{\mathbf E}\left[#1\right]}										
+
+\newcommand{\e}{{\mathbf E}}
+
+
+\newcommand{\V}[1]{{\mathbf{Var}}\left\{#1\right\}}
+\newcommand{\va}{{\mathbf{Var}}}
+\newcommand{\p}[1]{{\mathbf P}\left\{#1\right\}}
+\newcommand{\psub}[2]{{\mathbf P}_{#1}\left\{#2\right\}}
+\newcommand{\psup}[2]{{\mathbf P}^{#1}\left\{#2\right\}}
+\newcommand{\I}[1]{{\mathbf 1}_{[#1]}}
+\newcommand{\set}[1]{\left\{ #1 \right\}}
+% \Cprob Bases bracket size on term before conditioning; \probC on term after conditioning
+\newcommand{\Cprob}[2]{\mathbf{P}\set{\left. #1 \; \right| \; #2}} 
+\newcommand{\probC}[2]{\mathbf{P}\set{#1 \; \left|  \; #2 \right. }}
+\newcommand{\phat}[1]{\ensuremath{\hat{\mathbf P}}\left\{#1\right\}}
+\newcommand{\Ehat}[1]{\ensuremath{\hat{\mathbf E}}\left[#1\right]}
+\newcommand{\ehat}{\ensuremath{\hat{\mathbf E}}}
+\newcommand{\Esup}[2]{{\mathbf E^{#1}}\left\{#2\right\}}
+\newcommand{\esup}[1]{{\mathbf E^{#1}}}
+\newcommand{\Esub}[2]{{\mathbf E_{#1}}\left\{#2\right\}}
+\newcommand{\esub}[1]{{\mathbf E_{#1}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% SETS %%%%%%%%%%%%%%%%%%%%%
+\newcommand\cA{\mathcal A}
+\newcommand\cB{\mathcal B}
+\newcommand\cC{\mathcal C}
+\newcommand\cD{\mathcal D}
+\newcommand\cE{\mathcal E}
+\newcommand\cF{\mathcal F}
+\newcommand\cG{\mathcal G}
+\newcommand\cH{\mathcal H}
+\newcommand\cI{\mathcal I}
+\newcommand\cJ{\mathcal J}
+\newcommand\cK{\mathcal K}
+\newcommand\cL{{\mathcal L}}
+\newcommand\cM{\mathcal M}
+\newcommand\cN{\mathcal N}
+\newcommand\cO{\mathcal O}
+\newcommand\cP{\mathcal P}
+\newcommand\cQ{\mathcal Q}
+\newcommand\cR{{\mathcal R}}
+\newcommand\cS{{\mathcal S}}
+\newcommand\cT{{\mathcal T}}
+\newcommand\cU{{\mathcal U}}
+\newcommand\cV{\mathcal V}
+\newcommand\cW{\mathcal W}
+\newcommand\cX{{\mathcal X}}
+\newcommand\cY{{\mathcal Y}}
+\newcommand\cZ{{\mathcal Z}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BOLDFACE %%%%%%%%%%%%%%%%%%%%
+\newcommand{\bA}{\mathbf{A}} 
+\newcommand{\bB}{\mathbf{B}} 
+\newcommand{\bC}{\mathbf{C}} 
+\newcommand{\bD}{\mathbf{D}} 
+\newcommand{\bE}{\mathbf{E}} 
+\newcommand{\bF}{\mathbf{F}} 
+\newcommand{\bG}{\mathbf{G}} 
+\newcommand{\bH}{\mathbf{H}} 
+\newcommand{\bI}{\mathbf{I}} 
+\newcommand{\bJ}{\mathbf{J}} 
+\newcommand{\bK}{\mathbf{K}} 
+\newcommand{\bL}{\mathbf{L}} 
+\newcommand{\bM}{\mathbf{M}} 
+\newcommand{\bN}{\mathbf{N}} 
+\newcommand{\bO}{\mathbf{O}} 
+\newcommand{\bP}{\mathbf{P}} 
+\newcommand{\bQ}{\mathbf{Q}} 
+\newcommand{\bR}{\mathbf{R}} 
+\newcommand{\bS}{\mathbf{S}} 
+\newcommand{\bT}{\mathbf{T}} 
+\newcommand{\bU}{\mathbf{U}} 
+\newcommand{\bV}{\mathbf{V}} 
+\newcommand{\bW}{\mathbf{W}} 
+\newcommand{\bX}{\mathbf{X}} 
+\newcommand{\bY}{\mathbf{Y}} 
+\newcommand{\bZ}{\mathbf{Z}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%% PROBABILISTIC CONVERGENCE/EQUALITY %%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\eqdist}{\ensuremath{\stackrel{\mathrm{d}}{=}}}
+\newcommand{\convdist}{\ensuremath{\stackrel{\mathrm{d}}{\rightarrow}}}
+\newcommand{\convas}{\ensuremath{\stackrel{\mathrm{a.s.}}{\rightarrow}}}
+\newcommand{\aseq}{\ensuremath{\stackrel{\mathrm{a.s.}}{=}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%% Theorem types %%%%%%%%%%%%%%%%%
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{dfn}[thm]{Definition}
+\newtheorem{conj}{Conjecture}
+\newtheorem{ex}{Exercise}[section]
+\newtheorem{claim}[thm]{Claim}
+\newtheorem{cla}[thm]{Claim}
+\newtheorem{remark}[thm]{Remark}
+\newtheorem{hyp}[thm]{Hypothesis}
+\newtheorem{notation}[thm]{Notation}
+\endinput

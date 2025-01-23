@@ -1,0 +1,91 @@
+\documentclass{article}
+\input{preamble}
+
+\title{Prelims Probability extra questions}
+\author{Leo Tyrpak}
+\date{September 2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Functional representations}
+\subsection{Moment generating functions}
+Sheet 3 Question 5 asks you to prove that,
+\begin{equation*}
+    \E{\exp(t X)}=\exp(\lambda(e^t-1))
+\end{equation*}
+for $X$ a Poisson random variable of parameter $\lambda$.
+
+The expression on the left is called a moment generating function(mgf) and is a powerful analytical tool useful in probability to get concentration inequalities and uniqueness of distributions.
+
+We write $M_X(t)=\E{\exp(tX)}$ for the mgf at $t$.
+
+Calculate the mgf of the following:
+\begin{enumerate}
+    \item Geo(p)
+    \item Ber(p)
+    \item Uniform on $\{1,...,n\}$
+    \item Bin(n,p)
+    \item Exponential rate $\lambda$
+    \item Normal random variable mean $\mu$, variance $\sigma^2$
+\end{enumerate}
+Let $a,b$ be some constants, then what is the mgf of $Z_1=aX+b$ (i.e. $M_{Z_1}(t)$?
+
+Now suppose $X,Y$ are independent, then what is the mgf of $Z_2=X+Y$ (i.e. $M_{Z_2}(t)$)?
+
+You might have noticed that the mgf doesn't always exist, as sometimes the expectation of $\exp(tX)$ is infinite. 
+Can you construct an example of a random variable where $\E{\exp(tX)}$ is infinite for all $t\neq0$?
+
+By differentiating (and not worrying about the important analysis that needs to be done in the background but that you will only do later), can you relate the moments of a distribution with the mgf?
+
+Note: a moment is an expression of the form $\E{X^k}$.
+First moment is mean $\E{X}$ and second moment is $\E{X^2}$.
+
+Use this to find expressions for the mean and variance of a random variable $X$ using the mgf.
+Then check this with the distributions considered above.
+
+Prove that for all $t$:
+\begin{equation*}
+    \p{X>x}\leq M_X(t)\exp(-tx)
+\end{equation*}
+Consider $X$ is Ber(p),Geo(p),Bin(n,p),Poi($\lambda$),Exp($\lambda$) and for each of those optimise the right hand side in $t$ to get optimal tail bounds.
+\subsection{Probability generating functions}
+Sheet 5 Question 4 asks you to calculate the probability generating function of a Geometric distribution.
+
+Calculate the following pgf:
+\begin{enumerate}
+    \item Ber(p)
+    \item Bin(n,p)
+    \item Poisson($\lambda$)
+    \item Uniform $\{1,...,n\}$
+    \item Negative Binomial (r,p) with pdf $p_k={k+r-1 \choose k}(1-p)^kp^r$
+\end{enumerate}
+Let $a,b$ be some constants, then what is the pgf of $Z_1=aX+b$ (i.e. $M_{Z_1}(t)$?
+
+Now suppose $X,Y$ are independent, then what is the pgf of $Z_2=X+Y$ (i.e. $M_{Z_2}(t)$)?
+
+Can we recover the distribution of a random variable from the pgf?
+\section{Sums of random variables}
+Suppose $X_1,...,X_n$ are independent and identically distributed (i.i.d.) with $\E{X_1}=0$.
+Let $S_n=X_1+...+X_n$.
+
+Suppose $\E{|X_1|^k}<\infty$ for $k\in\N$.
+What is $\E{S_n^k}$? What is $M_{S_n}(t)$ in terms of $M_{X_1}(t)$?
+\section{Fun questions}
+\begin{enumerate}
+    \item For sheet 8 question 7, what happens if $p=a$ or $p=b$? What does the limit approach, why?
+    \item Let $U_1,...,U_n$ i.i.d Uniform [0,1] random variables. What is $\p{U_1+...+U_n\leq1}$?
+\end{enumerate}
+\subsection{Sheet 3 Question 6}
+Sheet 3 Question 6 asks us to find out how long we have to wait on average to see 2 heads in a row, then Sheet 5 Question 5 asks us to calculate the exact distribution.
+\begin{enumerate}
+    \item How long do you have to wait on average to get k heads in a row where $k\in\N$?
+    \item What is $r_n=\p{X>n}$ where $X$ is the first time you see k heads in a row?
+    \item Let Z be the first time you see $HTH$. What is $\E{Z}$ and $\p{Z>n}$?
+    \item Let Z be the first time you see $HTTH$. What is $\E{Z}$?
+    \item If the challenge doesn't prove enough, try to extend your methods to any sequence.
+\end{enumerate}
+
+
+\end{document}
