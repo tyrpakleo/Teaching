@@ -8,8 +8,51 @@
 \begin{document}
 
 \maketitle
+\section{Sums of random variables}
+Suppose $X_1,...,X_n$ are independent and identically distributed (i.i.d.) with $\E{X_1}=0$.
+Let $S_n=X_1+...+X_n$.
 
-\section{Functional representations}
+Suppose $\E{|X_1|^k}<\infty$ for $k\in\N$.
+What is $\E{S_n^k}$? What is $M_{S_n}(t)$ in terms of $M_{X_1}(t)$?
+\section{Combinatorics}
+\begin{enumerate}
+    \item For sheet 8 question 7, what happens if $p=a$ or $p=b$? What does the limit approach, why?
+    \item Let $U_1,...,U_n$ i.i.d Uniform [0,1] random variables. What is $\p{U_1+...+U_n\leq1}$?
+    \item During a game of poker you are dealt a hand of 5 cards uniformly at random. With the convention that aces can be either high or low for a straight. What is the probability of having 1 pair, 2pairs, 3 of a kind, straight, flush, full house, 4 of a kind, straight flush. See \href{https://en.wikipedia.org/wiki/List_of_poker_hands}{Poker hands} for a list of poker hands and what they mean.
+    \item 8 pawns are placed uniformly at random on a chess board, no more than one per square. What is the probability that no 2 are in the same row or column?
+    \item Players A, B, C throw a uniform dice at random in the order ABCABCABC... Each dice throw is independent. What is the probability that A throws a 6 first? What is the probability that A throws a 6 first and B throws a 6 the second and C is the third to throw a 6?
+    \item Each member of a group of n players roll a dice. For any pair of players who roll the same number, the group scores 1 point. Find the mean and variance of the total score of the group. Find the mean and variance of the total score if any pair of players who throw the same number scores that number.
+\end{enumerate}
+\section{Probabilistic method}
+This is also sometimes called probabilistic combinatorics.
+
+Let G=(V,E) be a finite simple graph (so no loops or multiple edges between 2 vertices.
+Write $d_v$ for the degree of an edge $v$.
+Prove the following:
+\begin{enumerate}
+    \item An independent set is a set of vertices no 2 of which share an edge. Denote by $\alpha(G)$ the largest independent set. Prove that:
+    \begin{equation}
+        \alpha(G)\geq\sum_v\frac{1}{d_v+1}
+    \end{equation}
+    \item For any set $W\subseteq V$, edge $e\in E$:
+    \begin{equation}
+        1_W(e)=1\text{ if e connects }W \text{ and }W^c
+    \end{equation}
+    If $N_W=\sum_e1_W(e)$ then prove that there exists $W$ such that $N_W\geq1/2|E|$
+\end{enumerate}
+We construct a random graph G' by including each edge independently with probability $p\in(0,1)$.
+\section{Analysis}
+\begin{enumerate}
+    \item Prove Bonferroni's inequality
+    \begin{equation}
+        \p{\bigcup_{r=1}^nA_r}\geq\sum_{r=1}^n\p{A_r}-\sum_{r<k}\p{A_r\cap A_k}
+    \end{equation}
+    \item Prove Kounia's inequality
+    \begin{equation}
+        \p{\bigcup_{r=1}^nA_r}\leq\min_k\left\{\sum_{r=1}^n\p{A_r}-\sum_{r\neq k}\p{A_r\cap A_k}\right\}
+    \end{equation}
+\end{enumerate}
+
 \subsection{Moment generating functions}
 Sheet 3 Question 5 asks you to prove that,
 \begin{equation*}
@@ -66,17 +109,7 @@ Let $a,b$ be some constants, then what is the pgf of $Z_1=aX+b$ (i.e. $M_{Z_1}(t
 Now suppose $X,Y$ are independent, then what is the pgf of $Z_2=X+Y$ (i.e. $M_{Z_2}(t)$)?
 
 Can we recover the distribution of a random variable from the pgf?
-\section{Sums of random variables}
-Suppose $X_1,...,X_n$ are independent and identically distributed (i.i.d.) with $\E{X_1}=0$.
-Let $S_n=X_1+...+X_n$.
-
-Suppose $\E{|X_1|^k}<\infty$ for $k\in\N$.
-What is $\E{S_n^k}$? What is $M_{S_n}(t)$ in terms of $M_{X_1}(t)$?
-\section{Fun questions}
-\begin{enumerate}
-    \item For sheet 8 question 7, what happens if $p=a$ or $p=b$? What does the limit approach, why?
-    \item Let $U_1,...,U_n$ i.i.d Uniform [0,1] random variables. What is $\p{U_1+...+U_n\leq1}$?
-\end{enumerate}
+\section{Miscellaneous}
 \subsection{Sheet 3 Question 6}
 Sheet 3 Question 6 asks us to find out how long we have to wait on average to see 2 heads in a row, then Sheet 5 Question 5 asks us to calculate the exact distribution.
 \begin{enumerate}
