@@ -147,8 +147,11 @@ One can check that,
     \end{align*}
     Now an induction finishes the proof of independence.
 \end{proof}
+
 \section{Fleming-Viot example}
+
 Let us discuss an example before moving on to the theory. Let us consider the Fleming-Viot process on $\R$ with mutation. 
+
 \subsection{Description of prelimit model}
 We have $N$ particles living on $\R$, with locations $(Y_1(t),...,Y_N(t)$ at time $t=0$. We fix a $\gamma\in[0,1]$.
 
@@ -180,15 +183,6 @@ An essential hypothesis can be stated in terms of operators $B^N$,
 \end{equation*}
 We will assume that $B^N$ converges to the generator $B$ of an $\R$-valued Markov process.
 
-\begin{hyp}
-    \begin{enumerate}
-        \item For the generators $(C_N)_{N\geq1}$ to converge we require,
-        $$.$$
-        \item 
-    \end{enumerate}
-\end{hyp}
-
-
 We ultimately don't look at the specific indices of the individuals and only consider the empirical measure of the process $Z^N(t)=\frac{1}{N}\sum_{k=1}^N\delta_{Y_k(t)}$.
 
 Let $N\rightarrow\infty$ and define $Z$ as
@@ -197,6 +191,7 @@ Let $N\rightarrow\infty$ and define $Z$ as
 \end{equation*}
 where the limit is taken in distribution.
 Then $Z(t)$ is the Fleming-Viot process.
+
 \subsection{Lookdown construction}
 Suppose we wanted to create a particle system $(X_1(t),...,X_N(t),X_{N+1}(t),...)\in\R^{\N}$ with the property that the projection to the first $N$ coordinates $(X_1(t),...,X_N(t))\in\R^N$ is a Fleming-Viot process with $N$ individuals. 
 
