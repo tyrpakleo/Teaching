@@ -1,0 +1,43 @@
+\documentclass[../main.tex]{subfiles}
+
+\usepackage{graphicx} % Required for inserting images
+\usepackage{appendix}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{subfiles}
+\usepackage{amsthm}
+
+\begin{document}
+\subsection{Schwartz space}
+\subsubsection{Basic introduction}
+In this section we will discuss Schwartz functions, as this will allow us to better understand Schwartz distributions and all our processes take values in the set of Schwartz distributions.
+Then it is essential to understand the underlying topology to proceed with the problem.
+
+We are already familiar with the space $C_c^\infty(\R^d)$ of infinitely differentiable compactly supported functions. The topology can be defined by convergence of sequences $f_n$ converges to $f$ if and only if $f,f_n$ are all supported in the same compact set $K$ and $\nabla^jf_n\rightarrow\nabla^jf$ uniformly for all $j$, where $\nabla^j$ is the j-tensor of partial derivatives of order j.
+
+An annoyance with this space is that it doesn't interact well with Fourier transforms, in the sense that the Fourier transform of a $C_c^\infty(\R^d)$ is not compactly supported, indeed if it were compactly supported then because the Fourier transform is real analytic by the identity theorem it is 0 everywhere. This is annoying if we would like to use any Fourier analysis on our processes.
+
+We would still like to retain the infinite differentiability and also the convergence to $0$ at infinity, however it doesn't need to be $0$ outside a compact set which we view as too restrictive.
+We say $f:\R^d\rightarrow\C$ is rapidly decreasing if $\sup_{x\in\R^d}|x|^n|f(x)|<\infty$ for all $n\in\N$. The space of Schwartz functions is infinitely differentiable functions where all derivatives are rapidly decreasing.
+
+In similar fashion to wikipedia let's define the seminorms:
+\begin{equation}
+    \lVert f\rVert_{n,j}=\sup_{x\in\R^d}|x|^n|\nabla^jf(x)|
+\end{equation}
+Then define Schwart space as $\cS(\R^d)=\{f\in C^\infty(\R^d):\lVert f\rVert_{n,j}<\infty\forall n,j\in\N\}$
+Which we endow with the topology induced by the seminorms, which turns this space into a locally convex metrizable complete topological vector space, also called Frechet space. 
+
+We are happy as the fourier transform is a linear isomorphism from the Schwartz space to itself with the topolgy just described, which means Fourier analysis is at our fingertips if we need it.
+
+Now unfortunately the processes with which we work are very irregular so to hope any sort of convergence result we have chosen to work on the space $\cS'(\R^d)$, the dual space of Schwartz functions which we endow with the weak-* topology.
+
+As a quick reminder, $\cS'(\R^d)=\{\lambda:\cS(\R^d)\rightarrow\C|\lambda$ is continuous and linear$\}$.
+Say $\lambda_n\rightarrow\lambda$ iff $\forall f\in\cS(\R^d):\langle f,\lambda_n\rangle\rightarrow\langle f,\lambda\rangle$.
+
+We call this the space of Schwartz distributions(or tempered distributions) and denote it $\cS'(\R^d)=\cS'$.
+\subsubsection{Compact subsets}
+We are probabilists and our ultimate aim to prove convergence in distribution of a certain process. 
+As is customary in most situations, it is easier to prove that a sequence of probability distributions is compact and then to prove uniqueness of the limit by proving convergence in a separating class of functions or sets. 
+The second part of the argument which is about proving convergence in a separating class is more probabilistic by nature as it requires us to understand the construction of the underlying $\sigma$ algebra.
+The first part of the argument requires us to precisely get at least sufficient conditions under which a set $K\subset \cS'$ is compact
+\end{document}

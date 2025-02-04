@@ -1,0 +1,20 @@
+\documentclass[../main.tex]{subfiles}
+
+\usepackage{graphicx} % Required for inserting images
+\usepackage{appendix}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{subfiles}
+\usepackage{amsthm}
+
+\begin{document}
+\subsection{Introduction}
+\subsection{Proving existence of solutions}
+\subsubsection{Space of distributions}
+Say we are given a differential equation and we want to prove that a solution exists in a certain space.
+What's easiest is to consider the biggest space possible, where if a solution existed in any space then it would have to exist in that space.
+What is this biggest space possible?
+It is of course the space $\cD'(\R^d)$, the space of distributions, i.e. the dual space of $C_c^\infty(\R^d)$.
+
+To prove a solution exists in this space we just need to define a weak form of the differential equation and then find a potential solution(which could be very irregular) and then test against functions in $C_c^\infty(\R^d)$(which are extremely regular).
+\end{document}
