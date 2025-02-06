@@ -8,6 +8,29 @@
 \begin{document}
 
 \maketitle
+These are notes and extra questions for the Part A (second year) course numerical analysis taught in Hilary term (January-March) in Oxford.
+\section{Good resources}
+I highly recommend An intro to numerical analysis \cite{NAbook}.
+Everything I reference will be from \cite{NAbook} unless specified otherwise.
+\section{Interpolating polynomials}
+\textbf{Reading: }Section 6 covers all the material plus some more on Hermite polynomials.
 
+\textbf{Questions: }I recommend doing all questions at the end of section 6(pg 195).
+Although the questions especially relevant for marking would be Q6.4-Q6.9, Q6.10, Q6.12.
+
+\section{LU factorisation}
+\textbf{Reading: }I recommend reading through section 2 of \cite{NAbook} to understand LU factorisation.
+The course in Oxford mostly covers sections 2.2-2.5.
+
+\textbf{Questions: }As for questions I recommend Q2.1-Q2.6 (pg 82) which follow the course.
+
+\textbf{Computational questions: }It is also a good exercise to implement a function which computes the LU factorisation using your favourite programming language. 
+The input would be a square $n\times n$ matrix $A$ and the output is $2$ $n\times n$ matrices $L$ and $U$ which is the $LU$ factorisation.
+Once that has been implemented, implement a function a function which takes as input $L$ and $U$ and a vector $b$ and returns $x$ such that $LUx=b$.
+\subsection{Condition number}
+To learn about condition number, read sections 2.6-2.8 and do Q2.7-2.14 at end of chapter.
+
+\bibliographystyle{plain}
+\bibliography{refs}
 
 \end{document}

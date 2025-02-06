@@ -1,15 +1,31 @@
 \documentclass{article}
 \input{preamble}
 
-\title{Statistics extra questions}
+\title{Statistics extra questions + references}
 \author{Leo Tyrpak}
 \date{September 2024}
 
 \begin{document}
 
 \maketitle
-\section{Probability parts}
-Prove Slutky's theorem
 
+For this course I will use Casella and Berger second edition as the standard reference \cite{CasellaBerger}.
+
+\section{Probability parts}
+Prove Slutky's theorem that if $X_n\rightarrow X$ in distribution and $Y_n\rightarrow c$ to a constant in probability, then $X_n+Y_n\rightarrow X+c$ and $X_nY_n\rightarrow Xc$ in distribution.
+See \href{https://en.wikipedia.org/wiki/Slutsky%27s_theorem}{Slutky's theorem on wiki} or Theorem 5.5.17 in Casella and Berger (pg 239).
+
+Section 5.4 of Casella and Berger deals with order statistics, and extends the course by considering the joint density of 2 order statistics.
+
+I recommend checking out Theorem 7.3.9 (Cramer–Rao Inequality) on pg 335, as it provides a lower bound on the variance of the MLE in terms of Fisher information.
+\section{Asymptotic properties}
+
+The MLE is asymptotically normal under some strong conditions.
+A reference can be found in \href{https://gregorygundersen.com/blog/2019/11/28/asymptotic-normality-mle/}{Asymptotic normality of MLE}.
+
+The delta method tells us that if our random sample is asymptotically normal then applying a $C^1$ function to it we recover asymptotic normality, see section 5.5.4 of Casella and Berger (pg 240).
+
+\bibliographystyle{plain}
+\bibliography{refs}
 
 \end{document}
