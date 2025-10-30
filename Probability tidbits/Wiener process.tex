@@ -1,0 +1,39 @@
+\documentclass{article}
+\input{preamble}
+
+\title{Wiener process}
+\author{Leo Tyrpak}
+\date{February 2025}
+
+\begin{document}
+
+\maketitle
+\section{Construction}
+What do we mean by a Wiener process?
+A lot goes behind that question. 
+Firstly, let's start with Brownian motion.
+One of the canonical definitions of Brownian motion is as the unique process $B_t$ which satisfies the following:
+\begin{itemize}
+    \item $B_t-B_s$ distributed as $B_{t-s}$ independent of $\sigma(B_r:r\leq s)$
+    \item $B_1\sim\cN(0,1)$
+    \item $B_0=0$
+    \item $B_t$ has almost surely continuous sample paths
+\end{itemize}
+
+We note that the first condition ensures that we have a Levy process and so the distribution is uniquely determined by one of the marginals. 
+Since one of the marginals is normal, it is easy to see that it is normal at all rationals and so under an additional assumption of right continuity at $0$ in probability(which is implied by continuous sample paths) we get that all marginals are normal.
+The condition of starting at zero is not strictly necessary, although we would usually use $x+B_t$ for a BM started at $x\neq0$.
+The condition of almost surely continuous sample paths is more so a consequence of the Kolmogorov-Chentsov continuity criterion.
+
+\section{Wiener process}
+\subsection{Wiener process on Hilbert space $U$}
+We can define a Wiener process to take values in a Hilbert space $U$ and then it is completely characterised by it's covariance operator $Q$ which is positive symmetric and of trace class, which means the sum of its eigenvalues is finite.
+This is a much stronger condition than being bounded which just requires the eigenvalues to be bounded.
+Operator norm= norm of highest eigenvalue in that case.
+\subsection{Generalised Wiener process in Hilbert space}
+In this case the Wiener process is a random linear map $U\ni a\rightarrow W_a(t)$ where $W_a(t)$ is a real valued stochastic process.
+This can be characterised by a covariance defined as follows:
+$\langle Qa,b\rangle=K(a,b)=\E{W_a(1)W_b(1)}$.
+We note that $Q$ is self-adjoint and positive definite, and so spectral theorem applies so we can easily take square roots as we desire.
+Let $U_0=Q^{1/2}(U)$ with the associated norm which we call the reproducing kernel.
+\end{document}
