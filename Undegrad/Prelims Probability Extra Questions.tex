@@ -10,38 +10,98 @@
 \maketitle
 \section{Sheets extra questions}
 
-\subsection{Sheet 1 extra}
+\subsection{Sheet 1: Recap school probability}
+Notes:
+\begin{itemize}
+    \item 
+\end{itemize}
+Extra:
+\begin{itemize}
+    \item 
+\end{itemize}
+
 Do the following from Grimmett:
 \begin{itemize}
     \item Q 1.2 (all)
     \item Q 1.3.1, 1.3.6, 1.3.7
 \end{itemize}
-\subsection{Sheet 2 extra}
-Do the following from Grimmett:
+
+
+\subsection{Sheet 2: Independence}
+Notes:
 \begin{itemize}
-    \item Q 1.5.2-1.5.5, 1.5.7, 1.5.9
+    \item 
 \end{itemize}
 
-Question 1: Find $4$ events which are $3$-way independent but not $4$-way independent, see if your construction generalises.
+Extra:
+\begin{itemize}
+    \item Q1: Find $4$ events which are $3$-way independent but not $4$-way independent, see if your construction generalises.
+    \item Q5 extra: estimate the probabilities of $(a),(b)$ replacing $13$ by $n$, $26$ by $2n$ and $52$ by $4n$. These are both related to the Central Limit Theorem and local Central Limit Theorem. Search them up if you want to find out more.
+\end{itemize}
 
-Question 5 extra: estimate the probabilities of $(a),(b)$ replacing $13$ by $n$, $26$ by $2n$ and $52$ by $4n$.
-These are both related to the Central Limit Theorem and local Central Limit Theorem.
-Search them up if you want to find out more.
-
-Question 6 extra:
+Q6 extra:
 \begin{itemize}
     \item Prove that if $\{A_i:i\in I\}$ independent then $\{A_i^c:i\in I\}$ independent
     \item Prove that if $\{A_i:i\in I\}$ independent then $\p{\bigcap_{i\geq1}A_i}=\prod_{i\geq1}\p{A_i}$
     \item Using equality $\sum_{n\geq 1}\frac{1}{n^s}=\prod_{p\text{ prime}}\left(1-\frac{1}{p^s}\right)^{-1}$ prove there are infinitely many primes
 \end{itemize}
 
-\subsection{Sheet 3 extra}
+Do the following from Grimmett:
+\begin{itemize}
+    \item Q 1.5.2-1.5.5, 1.5.7, 1.5.9
+\end{itemize}
+\subsection{Sheet 3: Some analysis}
+Notes:
+\begin{itemize}
+    \item Q1: One needs to state exactly how we represent a binomial as a sum of independent Bernoulli random variables.
+    \item Q2 is about Fubini's theorem(interchanging order of integration) and a neat formula for expectation. Can be extended to continuous case.
+    \item Q3 is about the memoryless property of Geometric random variables. This completely characterises the geometric distribution.
+    \item Q4 is about approximating Poisson with suitably scaled Binomial, this should be done rigorously with the notion of convergence of sequences you learn in analysis. For part b you need to numerically compute what was asked.
+    \item Q5 is about calculating moment generating function of Poisson distribution. The moment generating function completely characterises a random variable, see \href{https://en.wikipedia.org/wiki/Moment-generating_function}{wiki}.
+    \item Q7c, here you need to give an asymptotic expansion of \(\sum_{i=1}^n\frac{1}{i}\), you can learn more about it on \href{https://en.wikipedia.org/wiki/Harmonic_series_(mathematics)#Integral_test}{wiki}.
+\end{itemize}
+
+Extra:
+\begin{itemize}
+    \item Q1: prove that if \(E_1,...,E_n\) are i.i.d. (independent and identically distributed) Ber(p) then \(X=\sum_{i=1}^nE_i\) is Bin(n,p).
+    \item Q5: calculate MGF of Bernoulli, Binomial, Geometric, Uniform
+    \item Q3: prove that if a random variable on \(\N\) has the memoryless property then it is geometric
+    \item Q6: expectation before seeing \(3,4,...\) \(H\) in a row, what about a generic pattern of \(H,T\)?
+\end{itemize}
+
+
+\subsection{Sheet 4: Independence}
+Notes:
+\begin{itemize}
+    \item Q2 shows covariance zero doesn't imply independence (converse is true)
+    \item Q5 is about the thinning property of Poisson distributions
+    \item Q6 is about different equivalent definitions of independence
+    \item Q7: there is a nice way to solve the homogeneous problem using linear algebra, where if you have a recurrence relation of degree \(k\) for \(u_n\) then you get a matrix equation for \(v_n=(u_{n+k-1},...,u_{n+1,u_n})^T\)
+\end{itemize}
+
+Extra:
+\begin{itemize}
+    \item Q4 a,b: generalise \(X,Y\) to \(X\) is Geo(p) and Y is Geo(q)
+    \item Reprove Q6 carefully saying which axioms you use
+\end{itemize}
+
+Grimmett:
+\begin{itemize}
+    \item All of Section 3.2 and 3.3
+\end{itemize}
+
 \section{Sums of random variables}
 Suppose $X_1,...,X_n$ are independent and identically distributed (i.i.d.) with $\E{X_1}=0$.
 Let $S_n=X_1+...+X_n$.
 
 Suppose $\E{|X_1|^k}<\infty$ for $k\in\N$.
 What is $\E{S_n^k}$? What is $M_{S_n}(t)$ in terms of $M_{X_1}(t)$?
+
+Calculate \(\E{N^k}\) where \(N\) is a normal random variable with mean zero and variance \(1\).
+Now suppose \(\E{X_1}=0,\E{X_1^2}=1,\E{|X_1|^k}<\infty\), then what is \(\alpha_{n,k}\E{\left(\frac{S_n}{\sqrt{n}}\right)^k}\)?
+Porve that \(\lim_{n\to\infty}\alpha_{n,k}=\E{N^k}\). 
+This goes towards proving the Central Limit theorem by proving the moments converge, this is called the method of moments. 
+This also appears in the \(4\)'th year course random matrix theory.
 \section{Combinatorics}
 \begin{enumerate}
     \item For sheet 8 question 7, what happens if $p=a$ or $p=b$? What does the limit approach, why?
@@ -116,11 +176,17 @@ First moment is mean $\E{X}$ and second moment is $\E{X^2}$.
 Use this to find expressions for the mean and variance of a random variable $X$ using the mgf.
 Then check this with the distributions considered above.
 
-Prove that for all $t$:
+Prove that for all $t\geq 0$:
 \begin{equation*}
     \p{X>x}\leq M_X(t)\exp(-tx)
 \end{equation*}
 Consider $X$ is Ber(p),Geo(p),Bin(n,p),Poi($\lambda$),Exp($\lambda$) and for each of those optimise the right hand side in $t$ to get optimal tail bounds.
+
+We will specifically be interested in
+\begin{align*}
+    \lim_{x\to\infty}\frac{\log(\p{X>x})}{x}
+\end{align*}
+This is tail behaviour of \(X\) which is related to a subfield of probability called Large Deviation Theory (also a \(4\)'th year course).
 \subsection{Probability generating functions}
 Sheet 5 Question 4 asks you to calculate the probability generating function of a Geometric distribution.
 
@@ -148,5 +214,11 @@ Sheet 3 Question 6 asks us to find out how long we have to wait on average to se
     \item If the challenge doesn't prove enough, try to extend your methods to any sequence.
 \end{enumerate}
 
+\section{General puzzles and brainteasers}
+
+\begin{itemize}
+    \item (From Joost) you are given a biased coin, but you do not know the heads probability. How do you use this to sample a fair coin? [Discuss optimality, expected number of tosses to get the sample, etc.]
+    \item You are given a fair coin, and a number \(p \in (0, 1)\). How can you use the fair coin to generate a biased coin with probability \(p\)? Only finitely many flips allowed. [Discuss optimality, number of flips on average, etc.]
+\end{itemize}
 
 \end{document}
