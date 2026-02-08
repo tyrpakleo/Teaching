@@ -10,20 +10,31 @@
 \maketitle
 
 For this course I will use Casella and Berger second edition as the standard reference \cite{CasellaBerger}.
+\section{Sheet 1}
+Helpful:
+\begin{itemize}
+    \item Why does the MLE satisfy \(\hat{\theta}\sim N(\theta,\frac{1}{I(\theta)})\) i.e. asymptotic normality. A reference can be found in \href{https://gregorygundersen.com/blog/2019/11/28/asymptotic-normality-mle/}{Asymptotic normality of MLE}.
+    \item How can we justify the delta method rigorously? The delta method tells us that if our random sample is asymptotically normal then applying a \(C^1\) function to it we recover asymptotic normality, see section 5.5.4 of Casella and Berger (pg 240).
+    \item Are there any nice proofs of the fact that the \(r\)'th order statistic satisfies \(\E{X_{(r)}}=\frac{r}{n+1}\)?
+    \item Proof of Cramer-Rao bound and explanation can be found in \href{https://en.wikipedia.org/wiki/Cram%C3%A9r%E2%80%93Rao_bound#A_standalone_proof_for_the_general_scalar_case}{Cramer-Rao wikipedia}or Theorem 7.3.9 (Cramer–Rao Inequality) on pg 335 of Casella and Berger. This essentially says that for an unbiased estimator, it's variance is bounded below by 1 over the Fisher information which implies that the MLE is the asymptotically unbiased estimator with the asymptotically best variance. Problems in this Question sheet have been leading on to that.
+    \item Q5: This question is interesting as it tells us what happens to our estimators when we truncate the data which are we forced to do when manipulating data on a computer which has finite precision. The information being very close tells us that the asymptotic variance of the MLE actually isn't that different to the one with untruncated data, albeit slightly worse. Another error to account for is the fact that the quantity we are now estimating is slightly different to the original quantity, however with \(\delta\) precision the difference is at most \(\delta\).
+\end{itemize}
+
+Extra questions:
+\begin{itemize}
+    \item Prove the \(2\) equivalent formulations of the Fisher information, namely that;
+    \begin{align*}
+        \E{\left(\frac{\partial l(X;\theta)}{\partial\theta}\right)^2}=\E{-\frac{\partial^2 l(X;\theta)}{\partial\theta^2}}
+    \end{align*}
+    where \(l(X;\theta)\) is the log-likelihood.
+    \item Q2: which of the \(r\) order statistics has the highest and lowest variance. Prove that the variance is uniformly bounded by \(\frac{1}{4n}\). This in turn justifies approximating the quantiles by their mean. What is the correlation of \(2\) of the order statistics \(Cov(X_{(i)},X_{(j)})\)? Section 5.4 of Casella and Berger deals with order statistics, and extends the course by considering the joint density of 2 order statistics.
+    
+\end{itemize}
+
 
 \section{Probability parts}
 Prove Slutky's theorem that if $X_n\rightarrow X$ in distribution and $Y_n\rightarrow c$ to a constant in probability, then $X_n+Y_n\rightarrow X+c$ and $X_nY_n\rightarrow Xc$ in distribution.
 See \href{https://en.wikipedia.org/wiki/Slutsky%27s_theorem}{Slutky's theorem on wiki} or Theorem 5.5.17 in Casella and Berger (pg 239).
-
-Section 5.4 of Casella and Berger deals with order statistics, and extends the course by considering the joint density of 2 order statistics.
-
-I recommend checking out Theorem 7.3.9 (Cramer–Rao Inequality) on pg 335, as it provides a lower bound on the variance of the MLE in terms of Fisher information.
-\section{Asymptotic properties}
-
-The MLE is asymptotically normal under some strong conditions.
-A reference can be found in \href{https://gregorygundersen.com/blog/2019/11/28/asymptotic-normality-mle/}{Asymptotic normality of MLE}.
-
-The delta method tells us that if our random sample is asymptotically normal then applying a $C^1$ function to it we recover asymptotic normality, see section 5.5.4 of Casella and Berger (pg 240).
 
 \bibliographystyle{plain}
 \bibliography{refs}

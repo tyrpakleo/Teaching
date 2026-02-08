@@ -148,10 +148,10 @@ Grimmett:
 
 Extra:
 \begin{itemize}
-    \item Q2: give a few more terms of the asymptotic expansion of the quantity you get and give precise error bounds. (Hint:Taylor)
+    \item Q2: give a few more terms of the asymptotic expansion of the quantity you get and give precise error bounds (Hint:Taylor). Now calculate \(\mathbb{P}(M_n\leq\log(n)+c)\) as a function of \(c\). Does this tend to anything as \(n\to\infty\). If it does, find the \(c\) such that \(\lim_{n\to\infty}\mathbb{P}(M_n\leq\log(n)+c)=\frac{1}{2}\).
     \item Q4: use other means to get a more precise upper bound or an exact quantity. (Hint: MGF) What sort of bound would the central limit theorem tell us we should expect.
-    \item Q6: Explain intuitively why we have a lower variance for \(d\) than for \(c\). Does lower variance, same mean imply concentration around the mean? Why? Calculate higher order moments for the random variables in part \(c,d\), at least to leading order of \(n\). Then see if the scaling is correct so that we should expect a central limit theorem to hold.
-    \item Q7: What happens when \(p=a,b\)? Prove the law of large numbers for Bernoulli random variables. How would you start this question?
+    \item Q6: Explain intuitively why we have a lower variance for \(d\) than for \(c\). Does lower variance, same mean imply concentration around the mean? Why? Calculate higher order moments for the random variables in part \(c,d\), at least to leading order of \(n\). Then see if the scaling is correct so that we should expect a central limit theorem to hold. 
+    \item Q7: What happens when \(p=a,b\)? Prove the law of large numbers for Bernoulli random variables. How would you start this question? Does your answer change if we consider \([a,b),(a,b]\). What is \(\mathbb{P}(S_n=\lfloor np\rfloor)\) as \(n\to\infty\).
 \end{itemize}
 \section{Sums of random variables}
 Suppose $X_1,...,X_n$ are independent and identically distributed (i.i.d.) with $\E{X_1}=0$.
@@ -161,10 +161,10 @@ Suppose $\E{|X_1|^k}<\infty$ for $k\in\N$.
 What is $\E{S_n^k}$? What is $M_{S_n}(t)$ in terms of $M_{X_1}(t)$?
 
 Calculate \(\E{N^k}\) where \(N\) is a normal random variable with mean zero and variance \(1\).
-Now suppose \(\E{X_1}=0,\E{X_1^2}=1,\E{|X_1|^k}<\infty\), then what is \(\alpha_{n,k}\E{\left(\frac{S_n}{\sqrt{n}}\right)^k}\)?
-Porve that \(\lim_{n\to\infty}\alpha_{n,k}=\E{N^k}\). 
+Now suppose \(\E{X_1}=0,\E{X_1^2}=1,\E{|X_1|^k}<\infty\), then what is \(\alpha_{n,k}=\E{\left(\frac{S_n}{\sqrt{n}}\right)^k}\)?
+Prove that \(\lim_{n\to\infty}\alpha_{n,k}=\E{N^k}\). 
 This goes towards proving the Central Limit theorem by proving the moments converge, this is called the method of moments. 
-This also appears in the \(4\)'th year course random matrix theory.
+This also appears in the \(4\)'th year course random matrix theory and in Terence Tao's book(https://terrytao.wordpress.com/wp-content/uploads/2011/02/matrix-book.pdf).
 \section{Combinatorics}
 \begin{enumerate}
     \item For sheet 8 question 7, what happens if $p=a$ or $p=b$? What does the limit approach, why?
